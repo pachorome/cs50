@@ -1,0 +1,33 @@
+1.  Is the library for to define the size and type of integer variables
+
+2.  u prefix - unsigned integer, capable of representing only positive  values
+signed intefer - represents positive or negative values
+
+uint8_t - represents 8 bits or 1 byte of memory
+uint32_t - represents 32 bit memory type (unsigned/positve)
+int32_t - signed 32 bit type capable of representing −2,147,483,648 to 2,147,483,647. (like a long)
+uint16_t - 16 bit memory type capable of representing 0 to 65,535. (like a word)
+
+3.  BYTE - 8 bits, 1 byte
+    WORD - 16 bits, or 2 bytes.
+    DWORD - In a 32 bit computer, the size of a DWORD would be 4 bytes. 
+    LONG - 32 bits, or 4 bytes
+    
+4.  The first 2 bites of a BMP file contain the header. The header identifies that the file is in fact a BMP.
+
+5.  biSize - specifies the number of bits the BMP header/pixel/padding contains. 
+    bfSize - the size of the pixel/padding info.
+
+6.  Normally bit maps are read starting from the bottom left hand corner and work their way up. If the biHeight is negative, the image will start from the top left and continue down. 
+
+7.  The color depth information can be found at a 2 byte section of memory, offset 1Ch from 0 in the header. 
+
+8.  Fopen may return NULL if the file does not exist or fails to open for whatever reason. 
+
+9.  fread is always 1 in the code because we are writting 1 character at a time. 
+
+10. three
+
+11. fseek positions the read/write point in a particular point in the file stream
+
+12. SEEK_CUR tells fseek to position itself relative to the pointers current position. 
