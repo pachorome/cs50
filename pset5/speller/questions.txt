@@ -1,0 +1,13 @@
+0.  Is a very, very long word!!!  is an English word that refers to a lung disease that is otherwise known as silicosis
+
+1.  Getrusage() returns the pointer to a struct containing the usage statistics of the program.
+
+2.  16 data types
+
+3.  A rusage struct has an undefined value it is autonatically set to zero. This negates any dereferencing crashes or extra checks.Additionally, since the purpose of getrusage() is to track the resources required (including time and RAM) this would lead to inaccuracies.
+
+4.  Once a text file and a dictionary are loaded, the main () function checks and checks each character in the text to construct words. The word is completed when alphabet characters are followed by a non-alphabetic character. The word is checked for spelling errors by reading the loop starting with the zero character of the word
+
+5.  fgetc is a more effective tool for examining 1 character at a time, to check that it is a valid letter. Fscanf, by default, ignores whitespace, which we can use with fgetc to identify the end of a word. 
+
+6.  The const type ensures that the initial value of the parameter cannot be modified. This means that each word we are checking along with the dictionary cannot be changed. This safety measure is useful as these values should be consistent. Students are required to write these functions and it is possible that they might accidently alter something they shouldn't.
