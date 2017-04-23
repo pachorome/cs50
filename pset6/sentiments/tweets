@@ -1,0 +1,39 @@
+#!/usr/bin/env python3
+ 
+import os
+import sys
+import nltk
+ 
+from analyzer import Analyzer
+from termcolor import colored
+from helpers import get_user_timeline
+ 
+def main():
+    if len(sys.argv) != 2:
+        sys.exit("Usage: ./tweets twitterhandle")
+       
+    text = sys.argv[1].strip("@")
+    tweets = get_user_timeline(text, 50)
+    if tweets == None:
+        sys.exit("Error: problem getting tweets")
+        
+    positives = os.path.join(sys.path[0], "positive-words.txt")
+    negatives = os.path.join(sys.path[0], "negative-words.txt")
+   
+    analyzer = Analyzer(positives, negatives)
+    
+    if tweets == None:
+        sys.exit("Error: problem getting tweets")
+
+    for tweet in tweets:
+        final_score = analyzer.analyze(tweet)
+        
+        if final_score > 0.0:
+            print(colored(final_score, "green"), colored(tweet, "green"))
+        elif final_score < 0.0:
+            print(colored(final_score, "red"), colored(tweet, "red"))
+        else:
+            print(colored(final_score, "yellow"), colored(tweet, "yellow"))
+            
+if __name__ == "__main__":
+    main()
